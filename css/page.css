@@ -257,3 +257,7 @@ p {
 .Last-Next a .next p {
     font-size: 16px
 }
+
+#article {
+    width: 100%;
+}
