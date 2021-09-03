@@ -284,7 +284,26 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        
+        <h3 id="一、配置文件"><a href="#一、配置文件" class="headerlink" title="一、配置文件"></a>一、配置文件</h3><ol>
+<li>系统配置<blockquote>
+<p>对所有用户有效</p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/etc/</span>profile<br><span class="hljs-regexp">/etc/</span>paths <br><span class="hljs-regexp">/etc/</span>paths.d/<br></code></pre></td></tr></table></figure></li>
+<li>用户配置<blockquote>
+<p>对当前用户有效</p>
+</blockquote>
+<figure class="highlight haml"><table><tr><td class="code"><pre><code class="hljs haml">~/.bash_profile <br>~/.bash_login<br>~/.profile<br>~/.bashrc<br>~/.zshrc<br></code></pre></td></tr></table></figure>
+注：新版本 MacOS Catalina开始 用户配置默认文件是 <code>~/.zshrc</code>，网上很多资料都是创建<code>.bashrc</code>文件，新的系统注意区分<h3 id="二、修改配置"><a href="#二、修改配置" class="headerlink" title="二、修改配置"></a>二、修改配置</h3>以安装<code>Homebrew</code>为例</li>
+<li>依照官网说明下载Homestead</li>
+</ol>
+<p>下载安装<code>homebrew</code>到<code>/bin/bash</code>目录</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/bin/</span>bash -c <span class="hljs-string">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>配置环境变量<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><code class="hljs jboss-cli">vim ~<span class="hljs-string">/.zshrc</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">PATH</span>=/usr/local/bin:$PATH<br></code></pre></td></tr></table></figure></li>
+<li>生效配置<br>生效配置可以重启电脑或者通过下面命令：<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.zshrc<br></code></pre></td></tr></table></figure></li>
+</ol>
+
     </div>
 </div>
 <style>
